@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import posterImg from '../assets/poster.jpeg';
 import heroVideo from '../assets/hero video/Intro_Video.mp4';
 
 const Hero = () => {
@@ -44,6 +45,7 @@ const Hero = () => {
       <video
         ref={videoRef}
         playsInline
+        poster={posterImg}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src={heroVideo} type="video/mp4" />
