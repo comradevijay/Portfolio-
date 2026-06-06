@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import posterImg from '../assets/poster.jpeg';
+import posterImg from '../assets/about/poster.jpeg';
 import heroVideo from '../assets/hero video/Intro_Video.mp4';
 
 const Hero = () => {
