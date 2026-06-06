@@ -4,14 +4,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll to make navbar more solid
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -25,7 +20,7 @@ const Navbar = () => {
         isOpen 
           ? 'bg-[#ff2a2a] py-4'
           : isScrolled 
-            ? 'bg-transparent py-4' 
+            ? 'bg-black/60 backdrop-blur-md py-4 shadow-lg' 
             : 'bg-transparent py-6'
       }`}
     >
@@ -47,7 +42,6 @@ const Navbar = () => {
               className="text-white/80 hover:text-white font-medium relative group transition-colors duration-300"
             >
               {link}
-              {/* Smooth hover underline */}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
