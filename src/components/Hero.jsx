@@ -43,7 +43,6 @@ const Hero = () => {
       {/* Background Video — no autoPlay, no loop */}
       <video
         ref={videoRef}
-        muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
